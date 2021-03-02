@@ -27,7 +27,7 @@ function loadCSVs() {
                                 console.log(allRows.length);
                             })))
         .then(function(results) {
-            console.log(allRows[3000]);
+            console.log(allRows[2000]);
             setUpGraph(allRows);
         })
         .catch(function(err) {
@@ -48,23 +48,45 @@ function setUpGraph (nodes) {
         return Math.floor(Math.random() * Math.floor(max));
     }
 
-    function addDot(dot) {
+    function addCompetitionDot(competitionName) {
+        dots[0].push('    ' + competitionName + ' [fillcolor="#3498eb", shape="circle"]');
+    }
+
+    let competitions = ["LFC100Change2017", "LFC100Change2020", "Climate2030", "ECW2020", "EO2020", "LLIIA2020", "LoneStar2020"];
+
+    for (let competition of competitions) {
+        addCompetitionDot(competition);
+    }
+
+    var mediaWikiTitles = [];
+    function addOrgDot(dot) {
         let mediaWikiTitle = dot["MediaWiki Title"]
             ?
             dot["MediaWiki Title"].trim()
             .replace(/[^a-zA-Z0-9]/g, '')
             :
-             "undefined";
+            "undefined";
+        mediaWikiTitles.push(mediaWikiTitle);
         dots[0].push('    ' + mediaWikiTitle + ' [fillcolor="#2ca02c", shape="circle"]');
     }
 
+    let maxNodeCount = 100;
     let allRowsLength = allRows.length;
-    for(var i = 0; i < 100; i++) {
+    for(var i = 0; i < maxNodeCount; i++) {
         let rowIndex = getRandomInt(allRowsLength);
-        addDot(allRows[rowIndex]);
+        addOrgDot(allRows[rowIndex]);
     }
 
-    // allRows.forEach(row => addDot(row));
+    function addConnections() {
+        let mediaWikiTitlesLength = mediaWikiTitles.length;
+        for (var i = 0; i < mediaWikiTitlesLength; i++) {
+            let competitionIndex = getRandomInt(competitions.length);
+            dots[0].push('    ' + mediaWikiTitles[i] + ' -> ' + competitions[competitionIndex]);
+            console.log('    ' + mediaWikiTitles[i] + ' -> ' + competitions[competitionIndex]);
+        }
+    }
+
+    addConnections();
 
     dots[0].push('}');
 
