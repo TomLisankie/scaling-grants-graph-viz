@@ -1,4 +1,5 @@
 import * as Papa from "papaparse";
+import cytoscape from "cytoscape";
 
 window.onload = (event) => {
     var filePicker = document.getElementById("csvPicker");
@@ -6,14 +7,14 @@ window.onload = (event) => {
 };
 
 var allRows = [];
+var done = false;
+var done2 = false;
 
 function loadCSVs() {
     let csvFiles = Array.from(this.files);
     console.log(csvFiles);
     Promise.all(csvFiles
-                .map(
-                    csvFile =>
-                    new Promise(
+                .map(csvFile => new Promise(
                         (resolve, reject) =>
                         Papa.parse(csvFile, {
                             header: true,
@@ -21,13 +22,15 @@ function loadCSVs() {
                             error : reject}))
                         .then(
                             function(results) {
+                                for (var result of results.data) {
+                                    result["Competition Name"] = csvFile.name.substring(0, csvFile.name.length - 4);
+                                }
                                 allRows.push(results.data);
                                 console.log("Another CSV file added");
                                 allRows = allRows.flat();
                                 console.log(allRows.length);
                             })))
         .then(function(results) {
-            console.log(allRows[2000]);
             setUpGraph(allRows);
         })
         .catch(function(err) {
@@ -36,75 +39,59 @@ function loadCSVs() {
 }
 
 function setUpGraph (nodes) {
+    const competitions = Array.from(new Set(nodes.map(row => row["Competition Name"])));
 
-    var dots = [
-        [
-            'digraph  {',
-            '    node [style="filled"]',
-        ],
-    ];
+    var graphElements = competitions.map(function(competitionName) {
+        return {
+            data : {id: competitionName}
+        };});
 
-    function getRandomInt(max) {
-        return Math.floor(Math.random() * Math.floor(max));
+    var i = 0;
+    for (let node of nodes) {
+        graphElements.push({
+            data : {
+                id : node["MediaWiki Title"]
+            }
+        });
+        graphElements.push({
+            data : {
+                id: i,
+                source: node["MediaWiki Title"],
+                target: node["Competition Name"]}
+        });
+        i += 1;
     }
 
-    function addCompetitionDot(competitionName) {
-        dots[0].push('    ' + competitionName + ' [fillcolor="#3498eb", shape="circle"]');
-    }
+    var cy = cytoscape({
+        container : document.getElementById("graph"),
+        elements: graphElements,
+        layout: {
+            name: 'breadthfirst',
+            rows: 1
+        },
+        style: [
+            {
+                selector: 'node',
+                style: {
+                    'label': 'data(id)',
+                    'background-color': 'blue'
+                }
+            },
+            {
+                selector: 'edge',
+                style: {
+                    'label' : 'data(id)',
+                    'line-color' : 'green'
+                }
+            }
+        ]
+    });
 
-    let competitions = ["LFC100Change2017", "LFC100Change2020", "Climate2030", "ECW2020", "EO2020", "LLIIA2020", "LoneStar2020"];
-
-    for (let competition of competitions) {
-        addCompetitionDot(competition);
-    }
-
-    var mediaWikiTitles = [];
-    function addOrgDot(dot) {
-        let mediaWikiTitle = dot["MediaWiki Title"]
-            ?
-            dot["MediaWiki Title"].trim()
-            .replace(/[^a-zA-Z0-9]/g, '')
-            :
-            "undefined";
-        mediaWikiTitles.push(mediaWikiTitle);
-        dots[0].push('    ' + mediaWikiTitle + ' [fillcolor="#2ca02c", shape="circle"]');
-    }
-
-    let maxNodeCount = 100;
-    let allRowsLength = allRows.length;
-    for(var i = 0; i < maxNodeCount; i++) {
-        let rowIndex = getRandomInt(allRowsLength);
-        addOrgDot(allRows[rowIndex]);
-    }
-
-    function addConnections() {
-        let mediaWikiTitlesLength = mediaWikiTitles.length;
-        for (var i = 0; i < mediaWikiTitlesLength; i++) {
-            let competitionIndex = getRandomInt(competitions.length);
-            dots[0].push('    ' + mediaWikiTitles[i] + ' -> ' + competitions[competitionIndex]);
-            console.log('    ' + mediaWikiTitles[i] + ' -> ' + competitions[competitionIndex]);
-        }
-    }
-
-    addConnections();
-
-    dots[0].push('}');
-
-    var dotIndex = 0;
-    var graphviz = d3.select("#graph").graphviz()
-        .logEvents(false)
-        .on("initEnd", render);
-
-    function render() {
-        var dotLines = dots[dotIndex];
-        var dot = dotLines.join('');
-        graphviz
-            .renderDot(dot)
-            .on("end", function () {
-                dotIndex = (dotIndex + 1) % dots.length;
-                render();
-            });
-    }
+    console.log(cy.elements());
+    cy.nodes().on('click', function(e){
+        var ele = e.target;
+        console.log('clicked ' + ele.id());
+    });
 
 }
 
