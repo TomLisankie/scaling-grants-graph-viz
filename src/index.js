@@ -12,7 +12,6 @@ var done2 = false;
 
 function loadCSVs() {
     let csvFiles = Array.from(this.files);
-    console.log(csvFiles);
     Promise.all(csvFiles
                 .map(csvFile => new Promise(
                         (resolve, reject) =>
@@ -25,6 +24,7 @@ function loadCSVs() {
                                 for (var result of results.data) {
                                     result["Competition Name"] = csvFile.name.substring(0, csvFile.name.length - 4);
                                 }
+                                console.log(results.data);
                                 allRows.push(results.data);
                                 console.log("Another CSV file added");
                                 allRows = allRows.flat();
@@ -50,14 +50,19 @@ function setUpGraph (nodes) {
     for (let node of nodes) {
         graphElements.push({
             data : {
-                id : node["MediaWiki Title"]
+                id : node["MediaWiki Title"],
+                city : node["City"],
+                country : node["Org Country"]
             }
         });
         graphElements.push({
             data : {
                 id: i,
                 source: node["MediaWiki Title"],
-                target: node["Competition Name"]}
+                target: node["Competition Name"]},
+            style: {
+                'line-color' : ((node["Admin Review Status"] == "Valid" || node["Valid_Submission"] == "True") ? 'green' : 'red')
+            }
         });
         i += 1;
     }
@@ -80,7 +85,6 @@ function setUpGraph (nodes) {
             {
                 selector: 'edge',
                 style: {
-                    'label' : 'data(id)',
                     'line-color' : 'green'
                 }
             }
@@ -90,6 +94,12 @@ function setUpGraph (nodes) {
     console.log(cy.elements());
     cy.nodes().on('click', function(e){
         var ele = e.target;
+        document.getElementById("info").innerHTML =
+            "<table>" +
+            "<tr>" + "<td>" + "Submission Title: " + ele.id() + "</td>" + "</tr>" +
+            "<tr>" + "<td>" + "City: " + ele._private.data.city + "</td>" + "</tr>" +
+            "<tr>" + "<td>" + "Country: " + ele._private.data.country + "</td>" + "</tr>" +
+            "</table>";
         console.log('clicked ' + ele.id());
     });
 
