@@ -15,16 +15,20 @@
              height: 200px;
          }
         </style>
-        <script src="https://d3js.org/d3.v5.min.js"></script>
-        <script src="https://unpkg.com/@hpcc-js/wasm@0.3.11/dist/index.min.js"></script>
-        <script src="https://unpkg.com/d3-graphviz@3.0.5/build/d3-graphviz.js"></script>
         <script src="./main.js"></script>
     </head>
     <body>
-        <input type="file"
-               id="csvPicker" name="csvPicker"
-               accept=".csv"
-               multiple="multiple">
+        <div id="top-bar">
+            <input type="file"
+                   id="csvPicker" name="csvPicker"
+                   accept=".csv"
+                   multiple="multiple">
+            <label for="groups">Group-by:</label>
+            <select id="groups" name="groups">
+                <option value="competition">Competition</option>
+                <option value="city">City</option>
+            </select>
+        </div>
         <div id="info"></div>
         <div>
             <div id="graph">
