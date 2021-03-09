@@ -150,21 +150,61 @@ function getEdges(fieldName) {
     return graphElements;
 }
 
+function getSubmissionNodes() {
+    var i = 0;
+    var graphElements = [];
+    for (let node of allRows) {
+        if (node["City"] != undefined) {
+            if (node["MediaWiki Title"].length == 2) {
+                console.log(node["City"]);
+            }
+            graphElements.push({
+                data : {
+                    id : node["MediaWiki Title"],
+                    city : node["City"],
+                    country : node["Org Country"]
+                }
+            });
+        }
+        graphElements.push({
+            data : {
+                id: i,
+                source: node["MediaWiki Title"],
+                target: node["Competition Name"]},
+            style: {
+                'line-color' : ((node["Admin Review Status"] == "Valid" || node["Valid_Submission"] == "True") ? 'green' : 'red')
+            }
+        });
+        i += 1;
+    }
+    return graphElements;
+}
+
 function groupBy() {
     let group = document.getElementById("groups").value;
     if(group == "city") {
-        console.log(group);
         cy.remove("node[competition]");
         let cityNodeEles = getNodesToGroupAround("City", group);
         let cityEdgeEles = getEdges("City");
         cy.add(cityNodeEles);
         cy.add(cityEdgeEles);
-        var layout = cy.layout({
+        const layout = cy.layout({
             name: "cose"
         });
         cy.animate();
         layout.run();
     } else if (group == "competition") {
         cy.remove("node[city]");
+        let competitionNodeEles = getNodesToGroupAround("Competition Name", group);
+        let submissionNodes = getSubmissionNodes();
+        let competitionEdgeEles = getEdges("Competition Name");
+        cy.add(competitionNodeEles);
+        cy.add(submissionNodes);
+        cy.add(competitionEdgeEles);
+        const layout = cy.layout({
+            name: "cose"
+        });
+        cy.animate();
+        layout.run();
     }
 }
