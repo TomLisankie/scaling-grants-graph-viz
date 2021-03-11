@@ -47,10 +47,10 @@ function setUpGraph (nodes) {
                 competition: true
             },
             style : {
-                label: "data(id)",
                 'background-color' : 'orange'
             }
-        };});
+        };
+    });
 
     var i = 0;
     for (let node of nodes) {
@@ -82,14 +82,21 @@ function setUpGraph (nodes) {
         container : document.getElementById("graph"),
         elements: graphElements,
         layout: {
-            name: 'concentric',
-            rows: 1
+            name: 'cose',
+            nodeOverlap: 50,
+            nodeRepulsion: 20
         },
         style: [
             {
                 selector: 'node',
                 style: {
                     'background-color': 'blue'
+                }
+            },
+            {
+                selector: 'node[competition]',
+                style: {
+                    'label': 'data(id)',
                 }
             },
             {
@@ -125,7 +132,6 @@ function getNodesToGroupAround(fieldName, type) {
                 competition: true
             },
             style : {
-                // label: "data(id)",
                 'background-color' : 'orange'
             }
         };
