@@ -55,12 +55,12 @@ function setUpGraph (nodes) {
     var i = 0;
     for (let node of nodes) {
         if (node["City"] != undefined) {
-            if (node["MediaWiki Title"].length == 2) {
+            if (node["Org UID"].length == 2) {
                 console.log(node["City"]);
             }
             graphElements.push({
                 data : {
-                    id : node["MediaWiki Title"],
+                    id : node["Org UID"],
                     city : node["City"],
                     country : node["Org Country"]
                 }
@@ -69,10 +69,10 @@ function setUpGraph (nodes) {
         graphElements.push({
             data : {
                 id: i,
-                source: node["MediaWiki Title"],
+                source: node["Org UID"],
                 target: node["Competition Name"]},
             style: {
-                'line-color' : ((node["Admin Review Status"] == "Valid" || node["Valid_Submission"] == "True") ? 'green' : 'red')
+                'line-color' : (node["Admitted"] == "True" ? 'green' : 'red')
             }
         });
         i += 1;
@@ -83,8 +83,8 @@ function setUpGraph (nodes) {
         elements: graphElements,
         layout: {
             name: 'cose',
-            nodeOverlap: 50,
-            nodeRepulsion: 20
+            // nodeOverlap: 50,
+            // nodeRepulsion: 20
         },
         style: [
             {
@@ -148,7 +148,7 @@ function getEdges(fieldName) {
         graphElements.push({
             data : {
                 id: i,
-                source: node["MediaWiki Title"],
+                source: node["Org UID"],
                 target: node[fieldName]}
         });
         i += 1;
@@ -161,12 +161,12 @@ function getSubmissionNodes() {
     var graphElements = [];
     for (let node of allRows) {
         if (node["City"] != undefined) {
-            if (node["MediaWiki Title"].length == 2) {
+            if (node["Org UID"].length == 2) {
                 console.log(node["City"]);
             }
             graphElements.push({
                 data : {
-                    id : node["MediaWiki Title"],
+                    id : node["Org UID"],
                     city : node["City"],
                     country : node["Org Country"]
                 }
@@ -175,7 +175,7 @@ function getSubmissionNodes() {
         graphElements.push({
             data : {
                 id: i,
-                source: node["MediaWiki Title"],
+                source: node["Org UID"],
                 target: node["Competition Name"]},
             style: {
                 'line-color' : ((node["Admin Review Status"] == "Valid" || node["Valid_Submission"] == "True") ? 'green' : 'red')
@@ -197,7 +197,6 @@ function groupBy() {
         const layout = cy.layout({
             name: "cose"
         });
-        cy.animate();
         layout.run();
     } else if (group == "competition") {
         cy.remove("node[city]");
@@ -210,7 +209,6 @@ function groupBy() {
         const layout = cy.layout({
             name: "cose"
         });
-        cy.animate();
         layout.run();
     }
 }
