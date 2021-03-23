@@ -6,6 +6,13 @@ window.onload = (event) => {
     filePicker.addEventListener("change", loadCSVs, false);
 };
 
+const groupIDtoColumnNameMap = {
+    "city" : "City",
+    "state" : "State / Province",
+    "country" : "Country",
+    "competition" : "Competition Name"
+};
+
 var allRows = [];
 var cy;
 
@@ -55,14 +62,12 @@ function setUpGraph (nodes) {
     var i = 0;
     for (let node of nodes) {
         if (node["City"] != undefined) {
-            if (node["Org UID"].length == 2) {
-                console.log(node["City"]);
-            }
             graphElements.push({
                 data : {
                     id : node["Org UID"],
                     city : node["City"],
-                    country : node["Org Country"]
+                    country : node["Country"],
+                    state : node["State / Province"]
                 }
             });
         }
@@ -83,8 +88,8 @@ function setUpGraph (nodes) {
         elements: graphElements,
         layout: {
             name: 'cose',
-            // nodeOverlap: 50,
-            // nodeRepulsion: 20
+            nodeOverlap: 50,
+            nodeRepulsion: 20
         },
         style: [
             {
@@ -112,8 +117,9 @@ function setUpGraph (nodes) {
         var ele = e.target;
         document.getElementById("info").innerHTML =
             "<table>" +
-            "<tr>" + "<td>" + "Submission Title: " + ele.id() + "</td>" + "</tr>" +
+            "<tr>" + "<td>" + "Org Name: " + ele.id() + "</td>" + "</tr>" +
             "<tr>" + "<td>" + "City: " + ele._private.data.city + "</td>" + "</tr>" +
+            "<tr>" + "<td>" + "State / Province: " + ele._private.data.state + "</td>" + "</tr>" +
             "<tr>" + "<td>" + "Country: " + ele._private.data.country + "</td>" + "</tr>" +
             "</table>";
     });
@@ -168,7 +174,8 @@ function getSubmissionNodes() {
                 data : {
                     id : node["Org UID"],
                     city : node["City"],
-                    country : node["Org Country"]
+                    country : node["Country"],
+                    state : node["State / Province"]
                 }
             });
         }
@@ -188,27 +195,23 @@ function getSubmissionNodes() {
 
 function groupBy() {
     let group = document.getElementById("groups").value;
-    if(group == "city") {
-        cy.remove("node[competition]");
-        let cityNodeEles = getNodesToGroupAround("City", group);
-        let cityEdgeEles = getEdges("City");
-        cy.add(cityNodeEles);
-        cy.add(cityEdgeEles);
-        const layout = cy.layout({
-            name: "cose"
-        });
-        layout.run();
-    } else if (group == "competition") {
-        cy.remove("node[city]");
-        let competitionNodeEles = getNodesToGroupAround("Competition Name", group);
-        let submissionNodes = getSubmissionNodes();
-        let competitionEdgeEles = getEdges("Competition Name");
-        cy.add(competitionNodeEles);
-        cy.add(submissionNodes);
-        cy.add(competitionEdgeEles);
-        const layout = cy.layout({
-            name: "cose"
-        });
-        layout.run();
+    let groupIDs = Object.keys(groupIDtoColumnNameMap);
+    if (!groupIDs.includes(group)) {
+        alert("Not a valid group");
+        return;
     }
+
+    let groupsToRemove = groupIDs.filter((g) => g != group);
+    for (let g of groupsToRemove) {
+        cy.remove("node[" + g + "]");
+    }
+    let newNodeEles = getNodesToGroupAround(groupIDtoColumnNameMap[group], group);
+    let newEdgeEles = getEdges(groupIDtoColumnNameMap[group]);
+    cy.add(newNodeEles);
+    cy.add(newEdgeEles);
+    const layout = cy.layout({
+        name: "cose"
+    });
+    layout.run();
+
 }
