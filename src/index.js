@@ -85,8 +85,6 @@ function setUpGraph (nodes) {
         i += 1;
     }
 
-    console.log(graphElements);
-
     cy = cytoscape({
         container : document.getElementById("graph"),
         elements: graphElements,
