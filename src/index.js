@@ -71,14 +71,20 @@ function setUpGraph (nodes) {
                 }
             });
 
+            let edgeStyle = {};
+            if (node["Admitted"] == "True") {
+                edgeStyle["line-color"] = "green";
+            } else if (node["Admitted"] == "False") {
+                edgeStyle["line-color"] = "red";
+            } else {
+                edgeStyle["line-color"] = "gray";
+            }
             graphElements.push({
                 data : {
                     id: i,
                     source: node["Org UID"],
                     target: node["Competition Name"]},
-                style: {
-                    'line-color' : (node["Admitted"] == "True" ? 'green' : 'red')
-                }
+                style: edgeStyle
             });
         }
 
