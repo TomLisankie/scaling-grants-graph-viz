@@ -61,7 +61,7 @@ function setUpGraph (nodes) {
 
     var i = 0;
     for (let node of nodes) {
-        if (node["City"] != undefined) {
+        if (node["Org UID"] != "" && node["Org UID"] != undefined) {
             graphElements.push({
                 data : {
                     id : node["Org UID"],
@@ -70,18 +70,32 @@ function setUpGraph (nodes) {
                     state : node["State / Province"]
                 }
             });
+
+            graphElements.push({
+                data : {
+                    id: i,
+                    source: node["Org UID"],
+                    target: node["Competition Name"]},
+                style: {
+                    'line-color' : (node["Admitted"] == "True" ? 'green' : 'red')
+                }
+            });
         }
-        graphElements.push({
-            data : {
-                id: i,
-                source: node["Org UID"],
-                target: node["Competition Name"]},
-            style: {
-                'line-color' : (node["Admitted"] == "True" ? 'green' : 'red')
-            }
-        });
+
         i += 1;
     }
+
+    function removeEmptyEles(ele) {
+        if (ele.style == undefined) {
+            if (ele.data.source != "" && ele.data.source != undefined) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // graphElements = graphElements.filter(removeEmptyEles);
+    console.log(graphElements);
 
     cy = cytoscape({
         container : document.getElementById("graph"),
