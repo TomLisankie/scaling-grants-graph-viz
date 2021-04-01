@@ -85,16 +85,6 @@ function setUpGraph (nodes) {
         i += 1;
     }
 
-    function removeEmptyEles(ele) {
-        if (ele.style == undefined) {
-            if (ele.data.source != "" && ele.data.source != undefined) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    // graphElements = graphElements.filter(removeEmptyEles);
     console.log(graphElements);
 
     cy = cytoscape({
