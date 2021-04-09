@@ -31,11 +31,8 @@ function loadCSVs() {
                         for (var result of results.data) {
                             result["Competition Name"] = csvFile.name.substring(0, csvFile.name.length - 4);
                         }
-                        console.log(results.data);
                         allRows.push(results.data);
-                        console.log("Another CSV file added");
                         allRows = allRows.flat();
-                        console.log(allRows.length);
                     })))
         .then(function(results) {
             setUpGraph(allRows);
@@ -46,60 +43,20 @@ function loadCSVs() {
 }
 
 function setUpGraph(nodes) {
-    const competitions = Array.from(new Set(nodes.map(row => row["Competition Name"])));
 
-    var graphElements = competitions.map(function(competitionName) {
-        return {
-            data: {
-                id: competitionName,
-                competition: true
-            },
-            style: {
-                'background-color': 'orange'
-            }
-        };
-    });
+    let submissionNodes = getSubmissionNodes("Competition Name");
+    let propertyNodes = getNodesToGroupAround("Competition Name",  "competition");
+    let edges = getEdges("Competition Name");
 
-    var i = 0;
-    for (let node of nodes) {
-        if (node["Org UID"] != "" && node["Org UID"] != undefined) {
-            graphElements.push({
-                data: {
-                    id: node["Org UID"],
-                    city: node["City"],
-                    country: node["Country"],
-                    state: node["State / Province"]
-                }
-            });
-
-            let edgeStyle = {};
-            if (node["Admitted"] == "True") {
-                edgeStyle["line-color"] = "green";
-            } else if (node["Admitted"] == "False") {
-                edgeStyle["line-color"] = "red";
-            } else {
-                edgeStyle["line-color"] = "gray";
-            }
-            graphElements.push({
-                data: {
-                    id: i,
-                    source: node["Org UID"],
-                    target: node["Competition Name"]
-                },
-                style: edgeStyle
-            });
-        }
-
-        i += 1;
-    }
+    let graphElements = [];
+    graphElements = graphElements.concat(propertyNodes, submissionNodes, edges);
 
     cy = cytoscape({
         container: document.getElementById("graph"),
         elements: graphElements,
         layout: {
-            name: 'cose',
-            nodeOverlap: 50,
-            nodeRepulsion: 20
+            name: "cose",
+            animate: false
         },
         style: [{
                 selector: 'node',
@@ -116,7 +73,7 @@ function setUpGraph(nodes) {
             {
                 selector: 'edge',
                 style: {
-                    'line-color': 'green'
+                    'line-color': 'gray'
                 }
             }
         ]
@@ -157,31 +114,36 @@ function getNodesToGroupAround(fieldName, type) {
 }
 
 function getEdges(fieldName) {
-    var i = 0;
     var graphElements = [];
-    for (let node of allRows) {
+    for (var i = 0; i < allRows.length; i++) {
+        let node = allRows[i];
         if (node["Org UID"] != "" && node["Org UID"] != undefined) {
+            let edgeStyle = {};
+            if (node["Admitted"] == "True") {
+                edgeStyle["line-color"] = "green";
+            } else if (node["Admitted"] == "False") {
+                edgeStyle["line-color"] = "red";
+            } else {
+                edgeStyle["line-color"] = "gray";
+            }
             graphElements.push({
                 data: {
                     id: i,
                     source: node["Org UID"],
                     target: node[fieldName]
-                }
+                },
+                style: edgeStyle
             });
         }
-        i += 1;
     }
     return graphElements;
 }
 
-function getSubmissionNodes() {
-    var i = 0;
+function getSubmissionNodes(fieldName) {
     var graphElements = [];
-    for (let node of allRows) {
-        if (node["City"] != undefined) {
-            if (node["Org UID"].length == 2) {
-                console.log(node["City"]);
-            }
+    for (var i = 0; i < allRows.length; i++) {
+        let node = allRows[i];
+        if (node["Org UID"] != "" && node["Org UID"] != undefined) {
             graphElements.push({
                 data: {
                     id: node["Org UID"],
@@ -191,17 +153,6 @@ function getSubmissionNodes() {
                 }
             });
         }
-        graphElements.push({
-            data: {
-                id: i,
-                source: node["Org UID"],
-                target: node["Competition Name"]
-            },
-            style: {
-                'line-color': ((node["Admin Review Status"] == "Valid" || node["Valid_Submission"] == "True") ? 'green' : 'red')
-            }
-        });
-        i += 1;
     }
     return graphElements;
 }
@@ -219,11 +170,24 @@ function groupBy() {
         cy.remove("node[" + g + "]");
     }
     let newNodeEles = getNodesToGroupAround(groupIDtoColumnNameMap[group], group);
+    let submissionNodeEles = getSubmissionNodes(groupIDtoColumnNameMap[group]);
     let newEdgeEles = getEdges(groupIDtoColumnNameMap[group]);
     cy.add(newNodeEles);
+    cy.add(submissionNodeEles);
     cy.add(newEdgeEles);
     const layout = cy.layout({
-        name: "cose"
+        name: "cose",
+        animate: false
+    });
+    cy.nodes().on('click', function(e) {
+        var ele = e.target;
+        document.getElementById("info").innerHTML =
+            "<table>" +
+            "<tr>" + "<td>" + "Org Name: " + ele.id() + "</td>" + "</tr>" +
+            "<tr>" + "<td>" + "City: " + ele._private.data.city + "</td>" + "</tr>" +
+            "<tr>" + "<td>" + "State / Province: " + ele._private.data.state + "</td>" + "</tr>" +
+            "<tr>" + "<td>" + "Country: " + ele._private.data.country + "</td>" + "</tr>" +
+            "</table>";
     });
     layout.run();
 
