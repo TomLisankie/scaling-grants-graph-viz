@@ -1,0 +1,90 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "Org UID",
+    "columnInsertIndex": 1,
+    "description": "Create column Org UID at index 1 based on column Column using expression grel:value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Org UID",
+    "description": "Remove column Org UID"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Organization Legal Name",
+    "newColumnName": "Org UID",
+    "description": "Rename column Organization Legal Name to Org UID"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Org UID",
+    "index": 0,
+    "description": "Move column Org UID to position 0"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Application Level",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Highly Ranked"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "True"
+      }
+    ],
+    "description": "Mass edit cells in column Application Level"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Application Level",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NULL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "False"
+      }
+    ],
+    "description": "Mass edit cells in column Application Level"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Application Level",
+    "index": 0,
+    "description": "Move column Application Level to position 0"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Application Level",
+    "newColumnName": "Admitted",
+    "description": "Rename column Application Level to Admitted"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "State",
+    "newColumnName": "State / Province",
+    "description": "Rename column State to State / Province"
+  }
+]

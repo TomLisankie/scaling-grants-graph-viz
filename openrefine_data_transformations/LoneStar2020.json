@@ -1,0 +1,189 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "Org UID",
+    "columnInsertIndex": 1,
+    "description": "Create column Org UID at index 1 based on column Column using expression grel:value"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "City",
+          "expression": "jython:return \" \".join(map(lambda s: s.capitalize(), value.split(\" \")))",
+          "columnName": "City",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Washington, Dc",
+                "l": "Washington, Dc"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Washington, DC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Washington"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "City",
+          "expression": "jython:return \" \".join(map(lambda s: s.capitalize(), value.split(\" \")))",
+          "columnName": "City",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Washington Dc",
+                "l": "Washington Dc"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Washington DC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Washington"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "City",
+          "expression": "jython:return \" \".join(map(lambda s: s.capitalize(), value.split(\" \")))",
+          "columnName": "City",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Dallas, Texas",
+                "l": "Dallas, Texas"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Dallas, Texas"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Dallas"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Org UID",
+    "description": "Remove column Org UID"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Organization Name",
+    "newColumnName": "Org UID",
+    "description": "Rename column Organization Name to Org UID"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Org UID",
+    "index": 0,
+    "description": "Move column Org UID to position 0"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Admin Review Status",
+    "newColumnName": "Admitted",
+    "description": "Rename column Admin Review Status to Admitted"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Admitted",
+    "index": 0,
+    "description": "Move column Admitted to position 0"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Admitted",
+    "expression": "jython:if value == \"Valid\":\n    return \"True\"\nelse:\n    return \"False\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Admitted using expression jython:if value == \"Valid\":\n    return \"True\"\nelse:\n    return \"False\""
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Org Country",
+    "newColumnName": "Country",
+    "description": "Rename column Org Country to Country"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Org State/Province",
+    "newColumnName": "State / Province",
+    "description": "Rename column Org State/Province to State / Province"
+  }
+]

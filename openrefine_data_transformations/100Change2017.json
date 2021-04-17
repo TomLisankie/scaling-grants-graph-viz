@@ -1,0 +1,2784 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "Org UID",
+    "columnInsertIndex": 1,
+    "description": "Create column Org UID at index 1 based on column Column using expression grel:value"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Registered Organization Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AIMS Education Foundati"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AIMS Education Foundation"
+      }
+    ],
+    "description": "Mass edit cells in column Registered Organization Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Registered Organization Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "ASU Foundation for A New American University, aka ASU Foundation"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ASU Foundation for A New American University"
+      }
+    ],
+    "description": "Mass edit cells in column Registered Organization Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Registered Organization Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "ASU Foundation for A New American Universit"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ASU Foundation for A New American University"
+      }
+    ],
+    "description": "Mass edit cells in column Registered Organization Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Registration Location",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "texas"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Texas"
+      }
+    ],
+    "description": "Mass edit cells in column Registration Location"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AUSTIN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Austin"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Registered Organization Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Texas A&amp;M University"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Texas A&M University"
+      }
+    ],
+    "description": "Mass edit cells in column Registered Organization Name"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Org UID",
+    "description": "Remove column Org UID"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Registered Organization Name",
+    "newColumnName": "Org UID",
+    "description": "Rename column Registered Organization Name to Org UID"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Org UID",
+    "index": 0,
+    "description": "Move column Org UID to position 0"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Valid_Submission",
+    "index": 0,
+    "description": "Move column Valid_Submission to position 0"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Valid_Submission",
+    "newColumnName": "Admitted",
+    "description": "Rename column Valid_Submission to Admitted"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AK - Alaska"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Alaska"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AK"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Alaska"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "California"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "ca"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "California"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Ca"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "California"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Cairo Governorate"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cairo"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "California (CA)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "California"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Connecticut"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "D.C."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DC"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "FL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Florida"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Fl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Florida"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "FLORIDA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Florida"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Florida (FL)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Florida"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Flo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Florida"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "GA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Georgia"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "ga"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Georgia"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Ga"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Georgia"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "GAUTENG"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gauteng"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "GEORGIA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Georgia"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "HAMPSHIRE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hampshire"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "ARIZONA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Arizona"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Arizona (AZ)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Arizona"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AZ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Arizona"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "az"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Arizona"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Alabama"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "california"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "California"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CALIFORNIA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "California"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Colorado"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CO - Colorado"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Colorado"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "DE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Delaware"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "DELAWARE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Delaware"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "District of Colombia"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DC"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "District of Columbia"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DC"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "DISTRICT OF COLUMBIA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DC"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "east london"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "East London"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "GREECE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Greece"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "GUATEMALA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Guatemala"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "HAWAII"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hawaii"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "HI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hiwaii"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "IA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Iowa"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "ID"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Idaho"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "IL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Illinois"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "il"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Illinois"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Il"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Illinois"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Ilinois"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Illinois"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Illinois  60181"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Illinois"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "ILLINOIS (IL)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Illinois"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "IN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Indiana"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "KARNATAKA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Karnataka"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "kenya,westlands"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Kenya"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "KENYA/NYANZA/EAST AFRICA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Kenya"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "KS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Kansas"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "KY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Kentucky"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "LA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Louisiana"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "La"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Louisiana"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "london"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "London"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "LOUISIANA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Louisiana"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "MA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MASSACHUSETTS"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "ma"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MASSACHUSETTS"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "MASSACHUSETTS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Massachusetts"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "massachusetts"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Massachusetts"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Maryland (MD)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Maryland"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "MD"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Maryland"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "ME"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Maine"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "MI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Michigan"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Mi"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Michigan"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Michgian"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Michigan"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "MIchigan"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Michigan"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Missouri (MO)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Missouri"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "MISSOURI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Missouri"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "MN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Minnesota"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "MO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Missouri"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "MS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mississippi"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "MT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Montana"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "N.Y."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "New York"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Nairobi City County"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Nairobi"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "North Carolina"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Nc"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "North Carolina"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "ND"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "North Dakota"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Nebraska"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NEVADA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Nevada"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NJ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "New Jersey"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NEW YORK"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "New York"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NH"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "New Hampshire"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "None (International)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "N/A"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "n.a."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "N/A"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NV"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Nevada"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Nv"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Nevada"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "New York"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NYANZA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Nyanza"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "OH"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ohio"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Oh"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ohio"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Ohio (OH)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ohio"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "OK"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Oklahoma"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "ONTARIO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ontario"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Or"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Oregon"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "or"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Oregon"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "OR"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Oregon"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Other"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "N/A"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "PA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Pennsylvania"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "PR"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Puerto Rico"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Québec"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Quebec"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rhode Island"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "South Carolina"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SD"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "South Dakota"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Select State for USA, Canada, or Mexico"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "N/A"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "State"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "N/A"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "TAMILNADU"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TAMIL NADU"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "TENNESSEE (TN)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tennessee"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "TENNESSEE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tennessee"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "texas"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Texas"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Texas (TX)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Texas"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "TX"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Texas"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Tx"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Texas"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "TN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tennessee"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "UT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Utah"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Ut"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Utah"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "UTAH"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Utah"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "VA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Virginia"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "VA - Virginia"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Virginia"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Victoria, Melbourne"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Victoria"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "VT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Vermont"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "VIRGINIA (VA)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Virginia"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "WA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Washington"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Wa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Washington"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "WA - Washington"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Washington"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "WAshington"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Washington"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Washington DC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DC"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Washington, DC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DC"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "WV"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "West Virginia"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State / Province / Region",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "WI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wisconsin"
+      }
+    ],
+    "description": "Mass edit cells in column State / Province / Region"
+  }
+]
