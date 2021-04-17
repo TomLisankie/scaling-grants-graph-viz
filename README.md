@@ -1,5 +1,7 @@
 # scaling-grants-graph-viz
 
+An in-depth project overview can be found [here](https://docs.google.com/document/d/1ob2h32NBlo43z7im_moFwsNBY2D6165QT1Ku5m4kIFQ/edit?usp=sharing).
+
 ## How to run
 - Clone the repo
 - Navigate into the repo
